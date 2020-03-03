@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>Jquery_Start</title>
+    
+	<!-- Jquery -사용하기 쉽도록 매핑해둔 라이브러리를 링크로 연결해서 활용  -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		// 버튼 눌렀을 때 바뀌게.
+		function fn() {
+			$('[src="image/a.jpeg"]').attr("src","image/b.jpeg")
+			
+			//parseInt보다 Number 쓰는게 더 포괄적.
+			v1= Number($("#myin1").val())
+			v2= Number($("#myin2").val())
+			sum = v1+v2
+
+			$("#sum").text(sum)	// text를 받아옴.
+			
+		}
+	</script>
+</head>
+
+<body>
+	
+
+<!-- type="number" : 입력받는거가 number라는 뜻이고 받으면 text임. -->
+	숫자1: <input id="myin1" type="number"><br>
+	숫자2: <input id="myin2" type="number"><br>
+	합:<span id="sum"></span>
+	<br>
+	<button onclick="fn()">계산</button><br>
+	<img src="image/a.jpeg" alt=""><br>
+	<!-- <img src="image/b.jpeg" alt=""><br> -->
+
+
+
+	<!-- 
+		숫자1:
+		숫자2:
+		합:
+		[계산]
+
+	 -->
+
+</body>
+
+</html>

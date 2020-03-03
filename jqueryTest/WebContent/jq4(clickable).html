@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>Jquery_Start</title>
+    
+	<!-- Jquery -사용하기 쉽도록 매핑해둔 라이브러리를 링크로 연결해서 활용  -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		// 버튼 눌렀을 때 바뀌게.
+		function fn() {
+			// $(".fruit > li").css({'color':'red','background-color':'yellow'}) 
+			// $("img").css('border','solid 3px red')
+
+			// src의 attribute를 다른 이미지로 바꿈.
+			$('[src="image/a.jpeg"]').attr("src","image/b.jpeg")
+			
+			v= $("#myin").val()
+			alert(v)
+		}
+	</script>
+</head>
+
+<body>
+	<div id="mydiv">Show1</div>
+	<div class="myc">Show2</div>
+	<button onclick="fn()">OK</button>
+
+	<ul class="fruit">
+		<li>사과</li>
+		<li>딸기</li>
+		<li>포도</li>
+	</ul>
+
+	숫자1: <input id="myin" type="number"><br>
+	숫자2: <input id="myin" type="number"><br>
+	합:
+	
+	<br>
+	<img src="image/a.jpeg" alt=""><br>
+	<!-- <img src="image/b.jpeg" alt=""><br> -->
+
+
+
+	<!-- 
+		숫자1:
+		숫자2:
+		합:
+		[계산]
+
+	 -->
+
+</body>
+
+</html>

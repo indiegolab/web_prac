@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>jq_radio</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		function fn() {
+			//append: 뒤에 붙임
+			$("#mydiv").append("<h1>테스트</h1>")
+			//prepend: 앞에 붙임
+			$("#mydiv").prepend("<h1>테스트2</h1>")
+			//테이블도 붙이기 가능
+			$("#mytable").append("<tr><th>홍길동</th><th>20</th></tr>")
+			
+			// $("#mydiv").remove()		//없애기
+			$("#mydiv").hide(500)
+			
+		}
+		function fn1(){
+			$("#mydiv").show(500) //500:0.5초
+		}
+	</script>
+</head>
+
+<body>
+	<div id="mydiv">표시</div>
+	<button onclick="fn()">확인</button>
+	<button onclick="fn1()">확인1</button>
+
+	<table id="mytable">
+			<tr>
+				<th>이름</th>
+				<th>나이</th>
+			</tr>
+	</table>
+
+
+</body>
+
+</html>

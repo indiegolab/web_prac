@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>jq_radio</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		function fn() {
+		//조건 걸기:번호, 이메일, 시간(10~22)
+			cus_name = $("#cname").val()
+			//000-0000-0000
+			cus_phone =$("#cphone").val()
+			if(cus_phone.search(/\d{3}-\d{4}-\d{4}/g)==-1){
+				cus_phone= "Wrong format"
+			}
+			
+			cus_email=$("#cemail").val()
+			if(cus_email.search(/.+@.+\..+/g)==-1){
+				cus_email= "Wrong format"
+			}
+			
+			cus_size =$('[name="size"]:checked').val()
+			cus_top=''
+			 $('[name="topping"]:checked').each((i,v)=>{
+				 cus_top +=$(v).val()
+			 })
+
+			cus_time= $("#del_time").val()
+			if(cus_time < "10:00" || cus_time >"22:00"){
+				cus_time="Wrong time"
+			}
+			cus_want= $("#want").val()
+
+			$("#cus_rst").html(`
+			이름: ${cus_name} <br>
+			전화번호: ${cus_phone} <br>
+			E-mail: ${cus_email} <br>
+			사이즈: ${cus_size} <br>
+			토핑선택: ${cus_top} <br>
+			희망배송시간: ${cus_time} <br>
+			배송시 요청사항: ${cus_want}<br>
+			`)
+		}
+	</script>
+</head>
+
+<body>
+	고객명:<input id="cname" type="text"><br>
+    전화번호:<input id="cphone" type="text"><br>
+	E-mail:<input id="cemail" type="text"><br>
+	
+    <fieldset>
+        <legend>피자사이즈</legend>
+        <input type="radio" name="size" value="Small">Small<br>
+        <input type="radio" name="size" value="Medium">Medium<br>
+        <input type="radio" name="size" value="Large">Large<br>
+    </fieldset>
+    <fieldset>
+        <legend>토핑선택</legend>
+        <input type="checkbox" name="topping" value="베이컨">베이컨<br>
+        <input type="checkbox" name="topping" value="치즈">치즈<br>
+        <input type="checkbox" name="topping" value="양파">양파<br>
+        <input type="checkbox" name="topping" value="버섯">버섯<br>
+    </fieldset>
+    희망배송시간:
+    <input type="time" id="del_time" min="10:00" max="22:00">
+    <br>
+    배송시 요청사항:
+    <form>
+        <p><textarea id="want" cols="50" rows="10"></textarea></p>
+    </form>
+    <button onclick="fn()">주문하기</button><br>
+
+	<h3>주문내역</h3>
+	<span id="cus_rst"></span><br>
+</body>
+
+</html>

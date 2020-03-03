@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>jq_radio</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		function fn() {
+			name=$('[type="text"]').val()
+			age=$('[type="number"]').val()
+			color = $('[name="color"]:checked').val()
+			hobby=''
+			$('[name="hobby"]:checked').each((i,v)=>{
+				hobby +=$(v).val()
+			})
+
+			$("#mydiv").text(`Name:${name} Age:${age} Color:${color} Hobby:${hobby}`)
+		}
+	</script>
+</head>
+
+<body>
+	Name: <input type="text"><br>
+	Age: <input type="number"><br>
+
+	<fieldset>
+		<legend>Colors</legend>
+		<input name="color" type="radio" value="red">red<br>
+		<input name="color" type="radio" value="blue">blue<br>
+		<input name="color" type="radio" value="yellow">yellow<br>
+	</fieldset>
+
+	<fieldset>
+		<legend>Hobby</legend>
+		<input name="hobby" type="checkbox" value="fishing">fishing<br>
+		<input name="hobby" type="checkbox" value="football">football<br>
+		<input name="hobby" type="checkbox" value="swimming">swimming<br>
+	</fieldset>
+
+
+
+
+	<div id="mydiv">Show</div>
+	<!-- Show Result -->
+	<button onclick="fn()">Button</button><br><br>
+
+	
+
+
+	<img src="image/c.jpeg" alt=""><br>
+
+</body>
+
+</html>

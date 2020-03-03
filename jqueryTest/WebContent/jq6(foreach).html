@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>Jquery_Start</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		// DOM- each 활용. for문 없이 각 텍스트를 얻어옴.
+		function fn() {
+			arr = ["사과","딸기","포도"]
+			arr.forEach((v,i) => {
+				console.log(v,i)
+			});
+			$.each(arr,(i,v) => {
+				console.log(i,v)
+			})
+			
+			$("li").each((i,v)=>{
+				// console.log(i,v)
+				console.log(i,$(v).text())
+			})
+		}
+	</script>
+</head>
+
+<body>
+
+	<button onclick="fn()">버튼</button><br>
+
+	<ul>
+		<li>딸기</li>
+		<li>사과</li>
+		<li>오렌지</li>
+	</ul>
+
+
+
+	<img src="image/a.jpeg" alt=""><br>
+
+</body>
+
+</html>
