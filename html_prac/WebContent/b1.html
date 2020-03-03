@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<!-- chrome debug port is not available, change it on launch.json and try again. -->
+
+<body>
+
+<div class="container">
+
+<div class="container-fluid">
+	<h1>Hello World!</h1>
+	<p>Resize the browser window to see the effect.</p>
+	<p>The columns will automatically stack on top of each other when the screen is less than 768px wide.</p>
+	
+
+	<iframe src="page1.html"
+	width="1200" height="800">
+	<div class="row">
+		<div class="col-md-8">
+		  <div class="btn-group-vertical">
+			  <a href="page1.html" class="btn btn-info" role="button">페이지1</a>
+			  <a href="page2.html" class="btn btn-info" role="button">페이지2</a>
+			  <a href="page3.html" class="btn btn-info" role="button">페이지3</a>
+			</div>
+		  </div>
+	   
+		  <div class="col-md-8" style="background-color:lavenderblush;">
+			  <div class="main">
+				  <h1>페이지 메인</h1> <br>
+				  <img class="img-thumbnail img-responsive"
+				  src="image/joker.jpg" alt="">
+				  </div>  
+		  </div>
+	  </div>
+
+	</iframe>
+
+
+
+  </div>
+
+
+		<h1>Grid</h1>
+		<p>This example demonstrates a 50%/50% split on small, medium and large devices. On extra small devices, it will stack (100% width).</p>      
+		<p>Resize the browser window to see the effect.</p>      
+	<div class="row">
+		<div class="col-md-12" style="background-color:blue;">
+		<h1>타이틀제목1</h1>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4" style="background-color:yellow;">
+			<ul>
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+		
+		<div class="col-md-8" style="background-color:pink;">
+			<p>여기는 본문이 들어감.</p>
+		</div>
+	
+		<br>
+		
+		<div class="row">
+		<div class="col-md-12" style="background-color:brown;">
+		이 예시는 부트스트랩 그리드입니다.
+		이 예시는 부트스트랩 그리드입니다.
+		이 예시는 부트스트랩 그리드입니다.
+		이 예시는 부트스트랩 그리드입니다.
+	</div>
+	
+   	 <div class="col-md-6" style="background-color:pink;">
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+		</div>
+	  </div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" style="background-color:blue;">
+			<h6>Footer</h6>
+		</div>
+
+
+</body>
+</html>

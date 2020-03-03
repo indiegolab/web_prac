@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* > 우꺽쇠: 자식 */
+        /* ul > li{ */
+        /* .fruit > li{
+            color: red;
+        } */
+        
+        /* span > div > span{ */
+       .fruit ~ul
+        {
+            color: aqua;
+        }
+        /* name* *별 붙이면 my를 포함하는 모든 것 선택함. */
+        [name*="my"]{
+            text-align: center;;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mydiv">
+        <span>테스트1
+            <div>
+                <span>테스트2</span>
+            </div>
+        </span>
+    </div>
+
+
+    <ul class="fruit">
+        <li>사과</li>
+        <li>딸기</li>
+        <li>포도</li>
+        <li>멜론</li>
+        <li>파인애플</li>
+        <li>바나나</li>
+    </ul>
+
+<ul name="my">
+    <li>DBInc  </li>
+    <li>기업1</li>
+    <li>기업2</li>
+</ul>
+
+<ul name="mymy">
+    <li>DB손보  </li>
+    <li>기업1</li>
+    <li>기업2</li>
+    </ul>
+</body>
+</html>

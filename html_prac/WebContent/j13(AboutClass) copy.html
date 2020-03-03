@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+    
+	<script>
+        // 클래스 선언하기
+        // 접근권한자 따로 없고 다 public임
+
+        class Test{
+            constructor(aa,bb)
+            {
+                this.aa = aa
+                this.bb = bb
+            }
+            setData(x,y){
+                this.aa= x
+                this.bb= y
+            }
+            getAA(){
+                return this.aa
+            }
+            getBB(){
+                return this.bb
+            }
+        }
+        
+        obj = new Test(100,200)
+        console.log(obj.aa, obj.bb)
+
+        obj.setData(10,20)
+        console.log(obj.getAA)
+
+        // function Myclass(aa,bb)
+        // {
+        //     this.aa =aa
+        //     this.bb =bb
+        //     this.setData(function(x,y)
+        //     {
+        //         this.aa =x
+        //         this.bb =b
+        //     }
+
+        //     this.getAA() = function(){
+        //         return this.aa
+        //     }
+        // obj new Myclass(100,200)
+        // console.log(obj1.aa, obj1.bb)
+        // obj1.setData
+        // }
+        
+        class Student{
+            constructor(name, age){
+                this.name = name
+                this.age = age
+            }
+        }
+        arr = [new Student("홍길동", 20) , new Student("이순신",30)]
+        arr1 = [{"name":'홍길동', "age":20}, {"name":'이순신', "age":30}]
+        
+        for(o of arr){
+            console.log(o.name, o.age)
+        }
+        for(o of arr1){
+            console.log(o.name, o.age)
+        }
+
+        // Date 라이브러리 살펴보기
+        dt = new Date('2020-03-02 10:44:13')
+        console.log(dt.getFullYear(), dt.getMonth(), dt.getDate())
+        console.log(dt.getHours(), dt.getMinutes(), dt.getSeconds())
+
+        // 
+        // 일반함수(typeofm Number, parseInt,..)
+        // 내장객체(window, document, location,...)
+        // window 객체는 생략가능()
+        // new가 필요한 라이브러리..
+        
+        // window.alert("aa")
+        // alert("")
+
+</script>
+    
+</head>
+
+<body>
+
+    It works!
+
+</body>
+
+</html>

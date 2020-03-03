@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+    
+	<script>
+
+        function hap(a,b)
+        {
+            return a+b
+        }
+        rst = hap(10,20)
+        console.log(rst)
+
+        function circles(r)
+        {
+            for(r of arguments){
+            console.log(r*r*3.14)}
+        }
+
+        // arguments를 for문과 함께 활용하면 더 좋다.
+        circles(1,2,3,4,5)
+
+        function myFn(a=10, b=20)   // 디폴트 아규먼트
+        {
+            console.log(a,b)
+        }
+        myFn()
+        myFn(100)
+        myFn(100,200)
+        
+        //arguments(가변인자)를 활용하면 갯수 제한 없이 변수 받을 수 있음.
+         
+        function fn(){
+            console.log(arguments)  
+        }
+        
+        fn(10,20)
+        fn('aa','bb', 'cc')
+
+        
+
+
+    </script>
+    
+</head>
+
+<body>
+
+    함수 연습
+
+
+</body>
+
+</html>

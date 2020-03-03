@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>title</title>
+    <meta charset="UTF-8">
+    <script>
+        function fn() {
+            n = cname.value
+            cus_name.innerText = n
+
+            v = cphone.value
+            //000-0000-0000
+            if (v.search(/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/g) == -1)
+                cus_phone.innerText = "입력양식이 잘못됨"
+            else
+                cus_phone.innerText = v
+
+            //이메일
+            e = cemail.value
+            if (e.search(/^\w+@\w+$/g) == -1)
+                cus_email.innerText = "입력양식이 잘못됨"
+            else
+                cus_email.innerText = e
+
+            //사이즈
+            radioArr = document.querySelector('[name = "size"]:checked')
+            cus_size.innerText = radioArr.value
+
+            //토핑
+            checkArr = document.querySelectorAll('[name = "topping"]:checked')
+            cus_top.innerText = ""
+            for (c of checkArr) {
+                cus_top.innerText += c.value
+            }
+
+            t = del_time.value
+            //cus_time.innerText = t
+            if (t >= "10:00" && t <= "22:00")
+                cus_time.innerText = t
+            else
+                cus_time.innerText = "주문 불가"
+            //요청사항
+            cus_want.innerText = want.value
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    고객명:<input id="cname" type="text"><br>
+    전화번호:<input id="cphone" type="text"><br>
+    E-mail:<input id="cemail" type="text"><br>
+    <fieldset>
+        <legend>피자사이즈</legend>
+        <input type="radio" name="size" value="Small">Small<br>
+        <input type="radio" name="size" value="Medium">Medium<br>
+        <input type="radio" name="size" value="Large">Large<br>
+    </fieldset>
+    <fieldset>
+        <legend>토핑선택</legend>
+        <input type="checkbox" name="topping" value="베이컨">베이컨<br>
+        <input type="checkbox" name="topping" value="치즈">치즈<br>
+        <input type="checkbox" name="topping" value="양파">양파<br>
+        <input type="checkbox" name="topping" value="버섯">버섯<br>
+    </fieldset>
+    희망배송시간:
+    <input type="time" id="del_time" min="10:00" max="22:00">
+    <br>
+    배송시 요청사항:
+    <form>
+        <p><textarea id="want" cols="50" rows="10"></textarea></p>
+    </form>
+    <button onclick="fn()">주문하기</button>
+
+    <fieldset>
+        <legend>주문내역</legend>
+        고객명 : <span id="cus_name"></span><br>
+        전화번호 : <span id="cus_phone"></span><br>
+        이메일 : <span id="cus_email"></span><br>
+        사이즈 : <span id="cus_size"></span><br>
+        토핑 : <span id="cus_top"></span><br>
+        희망배송시간 : <span id="cus_time"></span><br>
+        배송시요청사항 : <span id="cus_want"></span><br>
+    </fieldset>
+
+
+
+</body>
+
+</html>

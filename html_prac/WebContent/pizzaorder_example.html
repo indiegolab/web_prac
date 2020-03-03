@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> Pizza Order! </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+	<script type="text/javascript">
+		function ValidateForm() {
+			if (frm.name.value == "") {
+				alert("Name을 입력하세요!")
+				frm.name.focus()
+				return
+			}
+			if (document.frm.password.value == "") {
+				alert("Password를 입력하세요!")
+				frm.password.focus()
+				return
+			}
+			if (document.frm.size.value == "none") {
+				alert("Size를 선택하세요!")
+				frm.size.focus()
+				return
+			}
+			if (document.frm.crust.checked == false) {
+				alert("Crust를 선택하세요!")
+				return
+			}
+			else {
+			}
+			var toppingChk = false;
+			var toppingLength = document.frm.toppings.length;
+			for (var i = 0; i < toppingLength; i++) {
+				if (document.frm.toppings[i].checked == true) {
+				toppingChk = true
+				}
+			}
+			if (toppingChk == false) {
+				alert("Toppings를 선택하세요!")
+				return
+			}
+			var order = new Array();
+			order[0] = document.frm.name.value
+			order[1] = document.frm.password.value
+			order[2] = document.frm.size.value
+			
+			var crustLength = document.frm.crust.length
+			var crust = new Array()
+			for (var i = 0; i < crustLength; i++){
+				if (document.frm.crust[i].checked == false) {
+					crust[i] = null
+				} else {
+					crust[i] = document.frm.crust[i].value
+				}
+				
+			}
+			
+			var toppingsLength = document.frm.toppings.length
+			var toppings = new Array();
+			for (var i = 0; i < toppingsLength; i++){
+				if (document.frm.toppings[i].checked == false) {
+					toppings[i] = null
+				} else {
+					toppings[i] = document.frm.toppings[i].value
+				}
+			}
+
+			document.write("이름: " + order[0] + "<br/>")
+			document.write("패스워드: " + order[1] + "<br/>")
+			document.write("주문하신 Size: " + order[2] + "<br/>")
+			document.write("주문하신 Crust: ")
+			for (var i = 0; i < crust.length; i++){
+				if (crust[i] != null)	{
+					document.write(crust[i])
+				}
+			}
+			document.write("<br/>")
+			document.write("주문하신 Topping: ")
+			for (var i = 0; i < toppings.length; i++){
+				if (toppings[i] != null)	{
+			document.write(toppings[i])
+			}
+		}
+			document.write("<br/>")
+			document.write("<form>\n")
+			document.write("<input type=\"submit\" value=\"확인\">")
+			document.write("</form>")
+	}
+	</script>
+ </HEAD>
+
+ <BODY>
+ <form name="frm">
+	<table width="200" height="300" border="1">
+		<tr>
+			<td colspan="2">Web Donald Pizza Order Form</td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td>
+			<input type="text" name="name"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td>
+			<input type="text" name="password"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Size:</td>
+			<td>
+			<select name="size">
+				<option value="none">=== pizza size ===</option>
+				<option value="small">small</option>
+				<option value="medium">medium</option>
+				<option value="large">large</option>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			Crust<br/>
+			<input type="radio" name="crust" value="thick">Thick
+			<input type="radio" name="crust" value="thin">Thin
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			Toppings<br/>
+			<input type="checkbox" name="toppings" value="ham"/>Ham<br/>
+			<input type="checkbox" name="toppings" value="pineapple"/>Pineapple<br/>
+			<input type="checkbox" name="toppings" value="cheese"/>Extra Cheese<br/>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+			<input type="button" value="Order!" name="order" onClick="ValidateForm()"/>
+			</td>
+		</tr>
+	</table>
+ </form>
+ </BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+    
+	<script>
+        
+        a = 10
+
+        function fn()
+        {
+            // var를 붙여야만 local변수다.
+            // var 키워드 없으면 함수내에 있어도 무조건 전역변수이다.
+            var a=100
+        }
+        fn()
+        
+        
+        function fn1()
+        {
+            b=11
+        }
+
+        fn1()
+
+        console.log("a=", a)
+        
+        // 위에 함수내에 var 붙이면 'b is not defined 나옴'
+        console.log("b=", b)
+    </script>
+    
+</head>
+
+<body>
+
+    함수 연습
+
+
+</body>
+
+</html>

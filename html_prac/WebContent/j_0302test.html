@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>030Test</title>
+    <meta charset="UTF-8">
+    
+<script>
+    function fn(){
+        //고객명
+        myname=document.querySelector('#myname')
+        // 전화번호 유효성
+        v = myphone.value
+        if(
+        v.search(/\d{3}-\d{4}-\d{4}/g) == -1) // 이 패턴을 찾지 못하면,
+            {myphone="입력형식이 잘못됨"
+            mydiv02.innerText = "전화번호: "+myphone}
+        else
+        {myphone=document.querySelector('#myphone')
+        mydiv02.innerText = "전화번호: "+myphone.value
+        }
+        
+        // 이메일 유효성
+        ve=email.value
+        if(ve.search(/@/) == -1){
+            email="입력형식이 잘못됨"
+            mydiv03.innerText = "이메일: "+email
+        }
+        else{
+        email = document.querySelector('#email')
+        mydiv03.innerText = "이메일: "+email.value
+        }
+        //피자사이즈
+        size=document.querySelector('[name="size"]:checked')
+        
+    // 토핑, 희망배송시간, 배송요청사항
+        // 토핑선택
+        checkArr=document.querySelectorAll('[name="topping"]:checked')
+
+        // 배송시간
+        // time_op=document.querySelector("select > option:checked")
+        if(dtime >= "10:00" && dtime <= "22:00"){
+            dtime=document.querySelector('#dtime')
+            mydiv2.innerText= "희망배송시간: "+dtime.value
+        }
+        else{
+            dtime="시간 범위 초과"
+            mydiv2.innerText= "희망배송시간: "+dtime
+        }
+
+
+        // 배송요청사항
+        tarea=document.querySelector('#tarea')
+
+        // ----------출력-----------
+        mydiv01.innerText = "고객명: "+ myname.value
+        
+        mydiv04.innerText = "사이즈: "+size.value
+        mydiv1.innerText="토핑선택:"
+            for(c of checkArr){
+                mydiv1.innerText += c.value+"　"}
+       
+        mydiv3.innerText = "배송요청사항:"+tarea.value
+
+
+        }
+
+</script>
+
+</head>
+<body>
+
+<h3>온라인 피자주문 폼</h3>
+<!-- 이름, 나이 입력하면 알맞은 색상 나오게 하기 -->
+    고객명: <input id="myname" type="text" name="myname"><br>
+    전화번호: <input id="myphone" type="text"><br>
+    <div id="myshow"></div>
+    E-mail: <input id= "email" type="text"><br>
+    <div id="myshow1"></div>
+
+    <!-- <button onclick="fn1()">확인</button> -->
+
+    <br>
+    <fieldset>
+        <legend>피자사이즈</legend>
+        <input type="radio" name="size"" value="Small">Small<br>
+        <input type="radio" name="size" value="Medium">Medium<br>
+        <input type="radio" name="size" value="Large">Large<br>
+    </fieldset> 
+
+    <fieldset>
+        <legend>토핑선택</legend>
+        <input type="checkbox"" name="topping" value="베이컨">베이컨<br>
+        <input type="checkbox"" name="topping" value="치즈">치즈<br>
+        <input type="checkbox"" name="topping" value="양파">양파<br>
+        <input type="checkbox"" name="topping" value="버섯">버섯<br>
+    </fieldset>
+
+<!-- 콤보박스, 리스트박스 만들기 -->
+희망배송시간:   
+    <input type="time" id="dtime"><br>
+<!--     
+    <select>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+        <option value="21:00">21:00</option>
+        <option value="22:00">22:00</option>
+    </select> -->
+
+    <!-- 배송요청사항 -->
+
+    <p><textarea id="tarea" cols="50" rows="10"></textarea></p>
+    <br>
+    <button onclick="fn()">주문하기</button><br>
+
+    <fieldset>
+        <legend>주문내역</legend>
+        <div id="mydiv01"></div>
+        <div id="mydiv02"></div>
+        <div id="mydiv03"></div>
+        <div id="mydiv04"></div>
+        <div id="mydiv1"></div>
+        <div id="mydiv2"></div>
+        <div id="mydiv3"></div>
+    </fieldset> 
+    
+</body>
+
+</html>

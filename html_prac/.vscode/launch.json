@@ -1,0 +1,48 @@
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome 127.0.0.1",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9227,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://127.0.0.1:56661/p/htmlTest1/WebContent/c4.html?_cmAuth\u003dbxcdlgdhrf"
+    },
+    {
+      "name": "Launch Chrome 127.0.0.1 (1)",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9250,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://127.0.0.1:56661/p/htmlTest1/WebContent/b1.html?_cmAuth\u003dbxcdlgdhrf"
+    },
+    {
+      "name": "Launch Chrome localhost",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9283,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:8080/htmlTest1/b1.html"
+    },
+    {
+      "name": "Launch Chrome localhost (1)",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9249,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:8089/htmlTest1/j1.html"
+    },
+    {
+      "name": "Launch Chrome localhost (2)",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9211,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:8089/htmlTest1/j2.html"
+    }
+  ]
+}

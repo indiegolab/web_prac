@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+    
+<script>
+    function fn(){
+        myname=document.querySelector('[type="text"]')
+        age=document.querySelector('[type="number"]')
+        color=document.querySelector('[name="color"]:checked')
+        mydiv.innerText = myname.value+" "+age.value+" "+color.value
+
+        op=document.querySelector("select > option:checked")
+        mydiv1.innerText=op.value
+
+        checkArr=document.querySelectorAll('[name="hobby"]:checked')
+        mydiv2.innerText=""
+        for(c of checkArr){
+            mydiv2.innerText += c.value+"　"
+        }
+    }
+
+
+</script>
+
+</head>
+<body>
+
+<!-- 이름, 나이 입력하면 알맞은 색상 나오게 하기 -->
+    이름: <input type="text"><br>
+    나이: <input type="number"><br>
+    <br>
+    <fieldset>
+        <legend align="center">색상</legend>
+        <input type="radio" name="color" value="빨강">빨강<br>
+        <input type="radio" name="color" value="파랑"">파랑<br>
+        <input type="radio" name="color" value="노랑">노랑<br>
+    </fieldset> 
+
+    <fieldset>
+        <legend align="center">취미</legend>
+        <input type="checkbox"" name="hobby" value="낚시">낚시<br>
+        <input type="checkbox"" name="hobby" value="독서"">독서<br>
+        <input type="checkbox"" name="hobby" value="게임">게임<br>
+    </fieldset> 
+
+<!-- 콤보박스, 리스트박스 만들기 -->
+    <select size="3">
+        <option value="회사1">회사1</option>
+        <option value="회사2">회사2</option>
+        <option value="회사3">회사3</option>
+    </select>
+
+    <br>
+    <button onclick="fn()">확인</button><br>
+
+    <div id="mydiv">표시</div>
+    <div id="mydiv1">표시</div>
+    <div id="mydiv2">표시</div>
+</body>
+
+</html>

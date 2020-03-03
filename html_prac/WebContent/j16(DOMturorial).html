@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+    
+<script>
+    // DOM(Document Object Model) 실습
+    // DOM: XML이나 HTML문서에 접근하기 위한 일종의 인터페이스
+    // 문서 내의 모든 요소를 정의하고 각가의 요소에 접근하는 방법을 제공
+
+    function fn()
+    {
+        m= document.getElementById("mydiv")
+        m.innerText = "헬로..."
+        eArr = document.getElementsByClassName("myc")
+        console.log(eArr)
+        console.log(eArr[0].innerText)
+        console.log(eArr[1].innerText)
+        divArr = document.getElementsByTagName("div")
+        console.log(divArr)
+        console.log(divArr[0].innerText)
+
+        mycArr = document.getElementsByName("myc")
+        console.log(mycArr)
+        // 현업에서는 위에꺼 다 안 쓰고 selector 씀
+        // document.querySelector("css셀렉터 문법 그대로 쓰면 됨")
+        // my = document.querySelector("#mydiv")
+        my = document.querySelectorAll(".myc")
+        for(c of my){
+            c.innerText = "코리아"
+        }
+        myn = document.querySelectorAll('[name="myn"]')
+        for(n of myn){  // array여서 for문을 돌려야함.
+            n.innerText = "하이"
+        }
+        
+        
+    }
+</script>
+    
+<style>
+     /* CSS 정리
+        id: #
+        class: .
+        name: [name="myn"]
+
+      */
+ 
+    #mydiv{
+
+    }
+    .myc{
+
+    }
+</style>
+
+
+</head>
+
+<body>
+    <div id="mydiv">테스트1</div>
+    <div class="myc">테스트2</div>
+    <div class="myc">테스트3</div>
+    <div name="myn">테스트4</div>
+    <button onclick="fn()">확인</button>
+</body>
+
+</html>

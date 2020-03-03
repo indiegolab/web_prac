@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+<title>실습</title>
+</head>
+
+<body>
+
+<script>
+	var cm , kg, BMI;
+	
+	cm=prompt("당신의 키를 입력하세요^^","cm");
+	kg=prompt("당신의 몸무게를 입력하세요^^","Kg");
+	
+	cm=cm*0.01;
+	
+	BMI=kg/(cm*cm);
+	
+	
+	if(BMI > 30.0)
+	{
+		document.write ("당신은 현재 [비만] 상태 입니다. 운동하세요!");
+	}
+	
+	else if((BMI > 25.0) && (BMI<=29.9))
+	{
+		document.write ("당신은 현재 [과체중] 상태 입니다. 조심하세요!");
+	}
+	
+	else if((BMI > 18.5) && (BMI<=24.9))
+	{
+		document.write ("당신은 [정상] 입니다^^");
+	}
+
+	else
+	{
+		document.write ("당신은 현재 [저체중] 상태 입니다. 많이 드세요!");
+	}
+	
+
+</script>
+
+</body>
+</html>

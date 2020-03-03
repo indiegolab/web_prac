@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+<script>
+function fn2(){
+    // li = document.querySelectorAll('li') // 태그 선택하고
+    sDom = document.querySelectorAll('.fruit > li, div') 
+    for(n of sDom)
+    {
+        console.log(n.innerText)
+    }
+}
+</script>
+
+</head>
+<body>
+    <div id="mydiv">테스트1</div>
+    <div class="myc">테스트2</div>
+    <div class="myc">테스트3</div>
+    <div name="myn">테스트4</div>
+    <div name="myn">테스트5</div>
+
+    <ul class="fruit">
+        <li>사과</li>
+        <li>딸기</li>
+        <li>포도</li>
+    </ul>  
+    
+    <ul>
+        <li>회사1</li>
+        <li>회사2</li>
+        <li>회사3</li>
+    </ul>
+
+
+    <button onclick="fn2()">확인</button>
+</body>
+
+</html>

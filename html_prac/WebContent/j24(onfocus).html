@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function(){
+            // mybtn.onclick = fn
+            mybtn.addEventListener("click", fn)
+            //onclick 대신에 여기에 넣어줌.
+            
+            // 마우스로 눌렀을 때
+            myin.onfocus = function(){
+                mydiv.innerText="Focus!"
+            }
+            // 마우스 박스 밖 눌렀을 때
+            myin.onblur = function(){
+                mydiv.innerText="blur..."
+            }
+            myin.onkeyup=function(){
+                myin1.value = myin.value
+                
+            }
+        }
+
+        function fn(){
+            mydiv.innerText = "테스트"
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+    <input id="myin" type="text">
+    <input id="myin1" type="text">
+    <div id="mydiv">표시</div>
+    <button id="mybtn">버튼</button>
+
+
+</body>
+</html>

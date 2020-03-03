@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="">
+
+	<title>title</title>
+	<meta charset="UTF-8">
+	<script>
+		function calc(){
+			
+			// num1 = Number(n1.value)
+			// num2 = Number(n2.value)
+			num1 = parseInt(n1.value)
+			num2 = parseInt(n2.value)
+			myresult.innerText = (num1+num2)
+
+		}
+	</script>
+</head>
+
+<body>
+	<label id="n1">숫자1: </label>
+	<input type="number"> <br>
+	
+	<label id="n2">숫자2: </label>
+	<input type="number"> <br>
+	
+	<div id="myresult">결과</div>
+	<button onclick="calc()">합계</button>
+
+</body>
+
+</html>

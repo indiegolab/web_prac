@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>css</title>
+
+<!-- 
+    *: 모든 곳에 적용
+    p: p태그에만 적용
+    div: div에만 적용
+    #my: 아이디 선택자. 특정 id를 갖고 있는 부분만.
+ -->
+
+<style>
+    /* 여러개 태그에 동시에 스타일 적용 가능. */
+    #my, p{
+        color: antiquewhite;
+        background-color: yellowgreen;
+    }
+
+
+   /*  class= test인 것에만 적용 */
+    div.test{
+        color: blue;
+        text-align: center;
+        font-family: "궁서체";
+    }
+</style>
+
+
+</head>
+
+<h1>타이틀</h1>
+
+<div>헬로</div>
+
+<p>테스트</p>
+<p class="test">테스트1</p>
+
+<div id="my">테스트2</div>
+<div>테스트3</div>
+
+<div class="test">테스트3</div>
+<div>테스트4</div>
+
+
+
+
+
+</body>
+</html>
+
+

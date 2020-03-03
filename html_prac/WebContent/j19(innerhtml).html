@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+    
+<script>
+    function fn(){
+        // 엘리먼트 생성하기
+        myli= document.createElement("li")
+        myli.innerHTML= "<h3>수박</h3>" //html 삽입 가능
+        myul.appendChild(myli)
+        myul.removeChild(straw) // 삭제
+    
+    }
+
+
+</script>
+
+</head>
+<body>
+
+    <ul id="myul">
+        <li>사과</li>
+        <li id="straw">딸기</li>
+        <li>포도</li>
+    </ul>
+
+    <div>테스트1</div>
+    <div id="mydiv">테스트2</div>
+    <div>테스트3</div>
+
+    <button onclick="fn()">확인</button>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //쿼트
+        a=10
+        b=3.14
+        c="abc"
+        s=`a=${a} b=${b} c=${c}`        //따옴표 아니고 `(왼쪽끝에꺼)
+        s1= "a="+a+"b="+b
+        console.log(s)
+
+        // window.onload = init
+
+        function init(){
+            mydiv.innerText = "테스트"
+        }
+
+        // window.addEventListener("load", init)
+        window.addEventListener("load", function(){
+            mydiv.innerText = "확인..."
+        })
+
+    </script>
+
+</head>
+
+
+<body onload="init()">
+    <div id="mydiv">표시</div>
+    <button onclick="">버튼</button>
+
+
+</body>
+</html>

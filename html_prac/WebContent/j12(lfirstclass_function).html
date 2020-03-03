@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+    <meta charset="UTF-8">
+    
+	<script>
+        //일급함수 : 함수이름은 메모리에 할당된 함수의 시작주소.
+        // 함수타입변수 할당, 인자, 리턴
+
+        fn = function()
+        {
+            console.log('fn call')
+        }
+        
+    console.log(fn) //fn: function 타입
+        
+        function aFn(aa){
+            aa()
+        }
+
+        aFn(fn)
+        // 함수를 받을 수도 있음.
+        aFn(function(){
+            console.log("myfn_aFn")
+        })
+        
+        //람다식(임시함수)도 받을 수 있음.
+        aFn( ()=>{
+            console.log("myfn_lambda")
+        })
+
+
+        
+
+    </script>
+    
+</head>
+
+<body>
+
+    It works!
+
+</body>
+
+</html>
