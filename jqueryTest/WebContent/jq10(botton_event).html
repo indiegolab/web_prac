@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>jq_init function</title>
+	
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		//DOM이 완성되면 init함수 호출. body onload와 같음
+		// $(init)
+		// function init() {
+		// }
+
+		//CallBack 함수 활용 Event등록
+		$(function(){
+			// init이벤트
+			$('#mydiv').text("코리아")
+			//버튼 클릭 이벤트
+			$('#mybtn').click(function(){
+				alert("call")
+
+			// li 클릭시 이벤트
+			$("li").click(function(){
+				alert($(this).text())
+			})
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div id="mydiv">표시</div>
+
+	<ul>
+		<li>사과</li>
+		<li>딸기</li>
+	</ul>
+
+	<button id="mybtn">실행</button>
+	<br>
+
+</body>
+
+</html>

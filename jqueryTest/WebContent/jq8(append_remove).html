@@ -4,12 +4,20 @@
 <head>
 	<meta charset="UTF-8">
     <title>jq_radio</title>
-    
+	
+	<style>
+		.myc{
+			color:red;
+			background-color: yellow;
+			border: solid 2px red;
+		}
+	</style>
+
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script>
 
 		function fn() {
-			//append: 뒤에 붙임
+		 	//append: 뒤에 붙임
 			$("#mydiv").append("<h1>테스트</h1>")
 			//prepend: 앞에 붙임
 			$("#mydiv").prepend("<h1>테스트2</h1>")
@@ -18,18 +26,23 @@
 			
 			// $("#mydiv").remove()		//없애기
 			$("#mydiv").hide(500)
-			
+
+			$("#mydiv").addClass("myc")
+
 		}
 		function fn1(){
 			$("#mydiv").show(500) //500:0.5초
+			$('#mydiv').removeClass("myc")
 		}
 	</script>
 </head>
 
 <body>
 	<div id="mydiv">표시</div>
-	<button onclick="fn()">확인</button>
-	<button onclick="fn1()">확인1</button>
+	<button onclick="fn()">실행</button>
+	<button onclick="fn1()">실행취소</button>
+	<br>
+
 
 	<table id="mytable">
 			<tr>
