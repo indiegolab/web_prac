@@ -13,86 +13,54 @@
 		}
 	</style>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script>
 
-		function fn() {
-			$("#mydiv").prepend("<h1>테스트2</h1>")
-			//테이블도 붙이기 가능
-			$("#mytable").append("<tr><th>홍길동</th><th>20</th></tr>")
-			
-			$("#mydiv").remove()		//없애기
-
-			// $("#mydiv").addClass("myc")
-
-		}
-		function fn1(){
-			$("#mydiv").show(500) //500:0.5초
-			// $('#mydiv').removeClass("myc")
-		}
-
-		
-
-		$(function(){
+		$(function (){
 
 			$('#mybtn').click(function(){
 				name =$("#name").val()
 				age =$("#age").val()
 				birth =$("#birth").val()
 
-				$("#mytable").append("<tr><td >"+name+"</td><td>"+age+"</td><td>"+birth+"</td><td><button class='btnDelete'>Delete</button></td></tr>")})
+			// $("#mytable >tbody").append("<tr><td >"+name+"</td><td>"+age+"</td><td>"+birth+"</td></tr>")})
 
-		 	/* $("#mytable").click(function () {
-				$(this).closest('tr').remove()})
- 				 */
-			$("#mytable").on('click', '.btnDelete', function () {
-   			 $(this).closest('tr').remove();});
-	
-	
-	})
+			$("#mytable >tbody").append(`<tr><td>${name}</td><td>${age}</td><td>${birth}</td></tr>`)
+				// <td><button class='btnDelete'>Delete</button></td>
+
+			$("tbody>tr").click(function () {
+				$(this).remove()
+				})
+			})		//괄호가 mybtn click을 다 포괄해야함.
+		
+		})
+
 	</script>
 </head>
 
 <body>
-
-	<div id="mydiv">표시</div>
-
 	이름: <input id="name" type="text"><br>
 	나이: <input id="age" type="number"><br>
-	생일: <input id="birth" type="date"><br>
+	생일: <input id="birth" type="date"><br><br>
 
+	<button id="mybtn">추가</button><br>
 
-	<!-- <button onclick="fn()">추가</button> -->
-	<br>
-	<button id="mybtn">추가</button>
-	<br>
-	<table id="mytable">
+	<table id="mytable" class="table table-striped table-bordered">
+			<thead>
 			<tr>
 				<th>이름</th>
 				<th>나이</th>
 				<th>생일</th>
 			</tr>
-			<tbody>
+		</thead>
 
+			<tbody>
 			</tbody>
 	</table>
-
-
-<!-- 	<table id="tbUser">
-		<tr>
-			<th>Sr</th><th>Name</th><th>Location</th><th></th>
-		</tr>
-		<tr>
-			<td>1</td><td>Amit</td><td>Ghatkopar</td>
-			<td><button class="btnDelete">Delete</button></td>
-		</tr>
-		<tr>
-			<td>2</td><td>Vicky</td><td>Powai</td>
-			<td><button class="btnDelete">Delete</button></td>
-		</tr>
-	</table> -->
-	
-
 
 </body>
 

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>Product_Add</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		function fn() {
+			pname = $("#pname").val()
+			pcnt =$("#pcnt").val()
+			pdate=$("#pdate").val()
+
+			$("#cus_rst").html(`
+			제품명: ${pname} <br>
+			수량: ${pcnt} <br>
+			생산일: ${pdate} <br>
+			`)
+		}
+	</script>
+</head>
+
+<body>
+	<form action="test13_db.jsp" target="myi" method="GET">
+
+    <h1>추가</h1>
+    <h3>제품입력</h3>
+	제품명:<input id="pname" type="text"><br>
+        수량:<input id="pcnt" type="number"><br>
+	생산일:<input id="pdate" type="date"><br>
+
+    <button onclick="fn()">결과</button><br><br>
+	<span id="cus_rst"></span><br>
+
+</form>
+
+<iframe name="myi" width="500" height="500"   frameborder="0"></iframe>
+</body>
+
+</html>

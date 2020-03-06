@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 탐색</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function (){
+        /*     t =$('li').eq(0).text() // eq(인덱스)
+            console.log($("#fruit >li").length)
+            
+            console.log($('#fruit').children().eq(0).text())  
+            console.log($('#fruit').next().children().eq(0).text()) //next:동등관계 다음 것
+            console.log($('#fruit').next().children().eq(0).parent().css('color','red')) */
+            
+            $('td').click(function(){
+                t=$(this).parent().children().text()
+                $('div').text(t)
+            })
+        })
+    </script>
+
+    
+</head>
+
+
+<body>
+
+    <ul id="fruit">
+        <li>사과</li>
+        <li>딸기</li>
+    </ul>
+
+    <ul>
+        <li>회사1</li>
+        <li>회사2</li>
+    </ul>
+
+    <table id="myt">
+        <tr><th>Name</th><th>Age</th></tr>
+        <tr><td>홍길동</td><td>20</td></tr>
+        <tr><td>이순신</td><td>30</td></tr>
+    </table>
+
+    <button id="mybtn" onclick="fn()">확인</button>
+    <div id="mydiv">Show</div>
+
+    
+</body>
+</html>

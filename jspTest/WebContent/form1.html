@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>jq_radio</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		function fn() {
+			myname=$('[name="myname"]').val()
+			myage=$('[name="myage"]').val()
+			color = $('[name="color"]:checked').val()
+			hobby=''
+			$('[name="hobby"]:checked').each((i,v)=>{
+				hobby +=$(v).val()
+			})
+
+			$("#mydiv").text(`Name:${myname} Age:${myage} Color:${color} Hobby:${hobby}`)
+		}
+	</script>
+</head>
+
+<body>
+
+<form action="b.jsp" target="myi" method="GET">
+	Name: <input type="text" name="myname"><br>
+	Age: <input type="number" name="myage"><br>
+
+	<fieldset>
+		<legend>Colors</legend>
+		<input name="color" type="radio" value="red">red<br>
+		<input name="color" type="radio" value="blue">blue<br>
+		<input name="color" type="radio" value="yellow">yellow<br>
+	</fieldset>
+
+	<fieldset>
+		<legend>Hobby</legend>
+		<input name="hobby" type="checkbox" value="fishing">fishing<br>
+		<input name="hobby" type="checkbox" value="football">football<br>
+		<input name="hobby" type="checkbox" value="swimming">swimming<br>
+	</fieldset>
+
+	<div id="mydiv">Show</div>
+	<!-- Show Result -->
+	<button onclick="fn()">Button</button><br><br>
+
+	<textarea cols="100" rows="10" frameborder ="0" name="content"></textarea>
+
+
+
+</form>
+
+<iframe name="myi" width="500" height="500"   frameborder="0"></iframe>
+</body>
+
+</html>
