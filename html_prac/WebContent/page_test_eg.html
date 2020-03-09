@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- 부트스트랩 하려면 link와 script 2개가 있어야함 -> link:디자인, script:동적 기능 --> 
+  <style>
+	h1{ text-align: center; }
+  #a{ width: 900px; background: grey; border: red;}
+</style>
+</head>
+
+<body>
+
+<div class="container"> 
+<!-- div class="container"는 필수 -->
+
+  <div class="row">
+	  <div class="col-md-12">
+	  <h1>웹사이트 연습</h1>
+  </div>
+
+  <div class="row"> 
+    <div class="col-md-4">
+    <span><a href="image/a.jpg" style="width: fit-content;" target="myi">페이지1</a></span><br>
+	  <span><a href="image/1.jpeg" target="myi">페이지2</a></span><br>
+	  <span><a href="image/2.jpeg" target="myi">페이지3</a></span></br>
+  </div>
+    
+    <div class="col-md-8" >
+		 <iframe src="image/joker.jpg" name="myi" width="800" height="500" frameborder="0" ></iframe>
+	</div>
+  </div>
+
+  <div class="row">
+	  <div class="col-md-12">
+	  <h1>Copy right 홍길동</h1>
+  </div>
+
+  <!-- 하나의 row를 절반씩 사용(row 총합 12중에서 6, 6으로 나눔) -->
+  <!-- 좌우 폭이 768px(sm), 992px(md, 반응이 sm보다 민감)보다 작아지면 위아래로 보여짐 -> 반응형 -->
+
+</div>
+    
+</body>
+</html>

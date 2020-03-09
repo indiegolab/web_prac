@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>jq_radio</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+
+		/* function fn() {
+			pname = $("#pname").val()
+			pcnt =$("#pcnt").val()
+
+			$("#cus_rst").html(`
+			제품명: ${pname} <br>
+			수량: ${pcnt} <br>
+			생산일: ${pdate} <br>
+			`)
+		} */
+	</script>
+</head>
+
+<body>
+
+<form action="m.jsp" target="myi" method="GET">
+	
+	이름:<input id="myname" type="text"><br>
+   	전화번호:<input id="myphone" type="number"><br>
+
+    <button onclick="fn()">결과</button><br><br>
+    <span id="cus_rst"></span><br>
+
+</form>
+
+
+<iframe name="myi" width="500" height="500"   frameborder="0"></iframe>
+</body>
+
+</html>
+
+
+
+
+

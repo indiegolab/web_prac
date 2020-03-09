@@ -5,36 +5,33 @@
 	<title>title</title>
 	<meta charset="UTF-8">
 	<script>
+
     // 테이블에 셀 삽입하는 함수 추가
     // json 활용
-   /*  j = {"aa":10,"bb":20}
+     j = {"aa":10,"bb":20}
     console.log(j['aa'])
     console.log(j.aa)
     console.log(j['bb'])
-    console.log(j.bb) */
+    console.log(j.bb)
 
-   /*  arr = [{"name":'홍길동',
-            'age':20},{'name':'이순신','age':30}]
-    // value 자체가 딕셔너리 형태로 들어갔기 때문에 for, of 쓰면 
-    // name, age 다 나옴 
-    for(n of arr)
-    {
-        console.log(n)
-    } */
+  
 
 // 전체 합 구하기
-    arr = [ 10,20,30,40,50]
+    arr1 = [ 10,20,30,40,50]
     sum=0
-    for(n of arr)
+    for(n of arr1)
     {
         sum +=n
     }
     console.log("합", sum)
 
+    
+    arr = [{"name":'홍길동',
+            'age':20},{'name':'이순신','age':30}]
+    // value 자체가 딕셔너리 형태로 들어갔기 때문에 for/of 쓰면 
+    // name, age 다 나옴
     function fn(){
-
         for(j of arr){
-
             tr=mytable.insertRow()
             c1=tr.insertCell()
             c2=tr.insertCell()
@@ -48,9 +45,6 @@
 </head>
 
 <body>
-    <div>
-    <img class="myimg" src="image/joker.jpg" alt="">
-    </div>
 
     <div id="mydiv">헬로</div>
     <button onclick="fn()">확인</button>

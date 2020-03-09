@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<!--Bootstrap 정리 
+	contatiner
+		row
+			div class="col-md-6"
+			div class="col-md-6"
+		row
+			div
+			div
+			div..
+			
+	컨테이너-row-div(각 md의 합은 12여야함)
+ -->
+<body>
+		<h1>Grid</h1>
+		<p>This example demonstrates a 50%/50% split on small, medium and large devices. On extra small devices, it will stack (100% width).</p>      
+		<p>Resize the browser window to see the effect.</p>      
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" style="background-color:blue;">
+		<h1>타이틀제목1</h1>
+	</div></div>
+
+	<div class="row">
+		<div class="col-md-4" style="background-color:yellow;">
+			<ul>
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+		</div>
+		<div class="col-md-8" style="background-color:pink;">
+			<p>여기는 본문이 들어감.</p>
+		</div>
+	</div>
+
+	<br>
+		
+	<div class="row">
+		<div class="col-md-6" style="background-color:brown;">
+		이 예시는 부트스트랩 그리드입니다.
+		이 예시는 부트스트랩 그리드입니다.
+		이 예시는 부트스트랩 그리드입니다.
+		이 예시는 부트스트랩 그리드입니다.
+		</div>
+	
+   	 <div class="col-md-6" style="background-color:pink;">
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+			이것은 부트스트랩 그리드
+		</div>
+	  </div>
+
+	<div class="row">
+			<div class="col-md-12" style="background-color:blue;">
+			<h6>Footer</h6>
+		</div></div>
+</div>
+</body>
+</html>

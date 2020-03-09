@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>title</title>
+	<title>DOM Starts!</title>
     <meta charset="UTF-8">
     
 <script>
@@ -24,6 +24,7 @@
 
         mycArr = document.getElementsByName("myc")
         console.log(mycArr)
+
         // 현업에서는 위에꺼 다 안 쓰고 selector 씀
         // document.querySelector("css셀렉터 문법 그대로 쓰면 됨")
         // my = document.querySelector("#mydiv")
@@ -35,35 +36,19 @@
         for(n of myn){  // array여서 for문을 돌려야함.
             n.innerText = "하이"
         }
-        
-        
-    }
+        }
 </script>
-    
-<style>
-     /* CSS 정리
-        id: #
-        class: .
-        name: [name="myn"]
-
-      */
- 
-    #mydiv{
-
-    }
-    .myc{
-
-    }
-</style>
-
 
 </head>
 
 <body>
     <div id="mydiv">테스트1</div>
+
     <div class="myc">테스트2</div>
     <div class="myc">테스트3</div>
+    
     <div name="myn">테스트4</div>
+    <div name="myn">테스트5</div>
     <button onclick="fn()">확인</button>
 </body>
 

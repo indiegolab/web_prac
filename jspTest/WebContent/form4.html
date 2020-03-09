@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>bimando</title>
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		/* function fn() {
+			pname = $("#pname").val()
+			pcnt =$("#pcnt").val()
+
+			$("#cus_rst").html(`
+			제품명: ${pname} <br>
+			수량: ${pcnt} <br>
+			생산일: ${pdate} <br>
+			`)
+		} */
+	</script>
+</head>
+
+<body>
+
+<form action="scontrol.jsp" target="myi">
+	<!-- requred: 값이 필요함
+		min max 바로 설정할 수 있음. -->
+
+	키:<input name="height" type="text" required min="100" max="250"
+		placeholder="100~250사이 키 입력(cm)"><br>
+   	몸무게:<input name="weight" type="number" required placeholder="몸무게입력(kg)"><br>
+
+    <button>전송</button>
+
+</form>
+
+
+<iframe name="myi" width="500" height="500"   frameborder="0"></iframe>
+</body>
+
+</html>
+
+
+
+
+

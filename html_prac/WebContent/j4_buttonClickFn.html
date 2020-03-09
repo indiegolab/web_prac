@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="">
+
+	<title>Button click event
+	</title>
+	<meta charset="UTF-8">
+	<script>
+		function fn(){
+			mydiv.innerText = "하이..."
+			myimg.src = "image/a.jpg"
+		}
+	</script>
+</head>
+
+<body>
+	<img class="img-thumbnail img-responsive" id="myimg" 
+		width="400"	src="image/joker.jpg" alt="조커"><br>
+
+	<input id="myin" type="text" value="홍길동">
+	<div id="mydiv">헬로</div>
+
+	<!-- 버튼 클릭시 함수 호출 -->
+	<button onclick="fn()">확인</button>
+</body>
+
+</html>

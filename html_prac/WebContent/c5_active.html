@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+
+<style>
+	/* ::active : 클릭했을 때 
+	뭔가 액션을 취했을 때. 뭔가 바뀜. */
+		div:active{
+			color: aliceblue;
+			border: solid 5px blueviolet;
+		}
+	div:hover{
+		color:yellowgreen;
+	}
+	/* even: 짝수 */
+	.score_list li:nth-child(even){
+		background-color: burlywood;
+	}
+
+	li:not(.my1)
+	{
+		background-color: aqua;
+	}
+</style>
+</head>
+
+<body>
+
+<div>테스트1</div>
+<div>테스트2</div>
+
+<ul class="score_list">
+	<li class="my1">항목1</li>
+	<li>항목2</li>
+	<li>항목3</li>
+	<li>항목4</li>
+</ul>
+
+
+<ul class="student_list">
+	<li>항목1</li>
+	<li>항목2</li>
+	<li>항목3</li>
+</ul>
+
+
+</body>
+
+</html>

@@ -78,6 +78,13 @@ host요청- 본문에 뭔가 들어가 있음.
       - odd: 홀수, even: 짝수 선택
       - not: 특정요소만 제외하고
 
+### form
+- name, id 둘 다 element를 식별(접근)하는 용도로 사용
+    - id는 유일한 값, 문서 안에서 오직 하나만 존재해야 함: getElementByID()
+    - name은 중복 가능함.: getElementsByName(), document.form["name"]
+- form을 활용해 입력받고, action을 통해 다음 페이지로 이동 
+- a태그를 활용해 link를 걸수도 있지만 그냥 form을 씀.
+
 #### Bootstrap
 
 span의 합이 12여야 함.
@@ -92,7 +99,19 @@ BS table을 많이 사용할 것임. DB랑 연동해서.
 
 ---
 
-#### Controller(java)
+#### MVC패턴
+
+* MVC: Model-View-Controller
+  * 개발할 때 3가지 형태로 역할을 나누어 개발하는 방법론 
+
+- Model: 어플리케이션이 **무엇**을 할 것인지 정의. 내부 비즈니스 로직 처리하는 역할
+  - 알고리즘, DB, 데이터 등
+- Controller(java): 모델을 **어떻게** 처리할 지 알려주는 역할, 모바일에서는 화면의 로직처리 부분.
+  - Model과 View가 각각 무엇을 해야 할지 알고 있고, 통제함. 
+
+- View: 화면에 무엇인가를 **보여주기 위한 역할** 컨트롤러 하위에 종속. 모델이나 컨트롤러가 보여주려고 하는 모든 필요한 것들을 보여줌. 
+사용자의 입력을 받아서 모델의 데이터를 업데이트
+
 
 
 

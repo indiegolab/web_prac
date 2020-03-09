@@ -12,8 +12,6 @@
             location.href = "a.html?myname="+n+"&age="+a
         }
     </script>
-
-
 </head>
 
 
@@ -21,16 +19,16 @@
     <div id="mydiv">표시</div>
     <button onclick="fn()">시작</button><br>
 
-
     <!-- name, id 둘 다 element를 식별(접근)하는 용도로 사용 -->
     <!-- form을 활용해 입력받고, action을 통해 다음 페이지로 이동 
     a태그를 활용해 link를 걸수도 있지만 그냥 form을 씀.-->
 
     <a href="j22.html?myname=aaa&age=20">이동</a>
 
+
     <!-- action, method, target을 이용
         iframe에 내가 입력한 값을 표시함. -->
-    <form action="j22.html" method="GET" target="myi">
+    <form action="j22(connectedtoForm).html" method="GET" target="myi">
         이름:<input id="nameid" type="text" name="myname"><br>
         나이:<input id="ageid" type="number" name="age"><br>
         <button>제출</button>
