@@ -1,2 +1,2 @@
 # web_prac
-Web Development
+Web Development Class for Novice
